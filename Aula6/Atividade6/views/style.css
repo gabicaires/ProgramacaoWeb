@@ -1,0 +1,12 @@
+body{
+    background-image: linear-gradient(to right, white, rgb(137, 194, 227));
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+h4{
+    width: 20vw;  
+    height: 5vh;
+    border-radius: 0.5rem;
+    color: rgb(42, 157, 223);
+
+}
