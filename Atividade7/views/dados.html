@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Lista de dados</title>
+</head>
+
+<body>
+  {{#erro_form}}
+  <div class="alert alert-danger" role="alert">
+    Nenhum campo pode estar vazio ou preenchido incorretamente!
+  </div>
+  <a href="/" class="btn btn-primary">Voltar</a>
+  {{/erro_form}}
+
+  {{^erro_form}}
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="w-50">
+      <h1 class="text-center mb-5">Lista de dados</h1>
+      <ul class="list-group mt-5">
+        <li class="list-group-item border-1 border-dark"><strong>Nome:</strong> {{dados.nome}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>CPF:</strong> {{dados.cpf}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>Data de nascimento:</strong> {{dados.dataNascimento}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>Endereço:</strong> {{dados.endereco}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>UF:</strong> {{dados.uf}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>CEP:</strong> {{dados.cep}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>E-mail:</strong> {{dados.email}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>Telefone:</strong> {{dados.telefone}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>Especialidade médica:</strong> {{dados.especialidade}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>Data de agendamento:</strong> {{dados.dataAgendamento}}</li>
+        <li class="list-group-item border-1 border-dark"><strong>Medicamentos alérgicos:</strong> {{dados.medicamentosAlergicos}}</li>
+      </ul>
+    </div>
+  </div>
+  {{/erro_form}}
+</body>
+
+</html>
