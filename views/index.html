@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Formulário de Agendamento</title>
+</head>
+
+<body>
+  <div class="container d-flex justify-content-center align-items-center ">
+    <div class="w-50 pt-5 pb-5">
+      <h1 class="text-center p-3">Formulário de Agendamento</h1>
+      <form action="/dados" method="post">
+        <div>
+          <h3 class="pt-2 pb-2">Dados Pessoais</h3>
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome completo</label>
+            <input type="text" class="form-control" id="nome" name="nome" required></input>
+          </div>
+          <div class="mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" required></input>
+          </div>
+          <div class="mb-3">
+            <label for="dataNascimento" class="form-label">Data de nascimento</label>
+            <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" required></input>
+          </div>
+          <div class="mb-3">
+            <label for="endereco" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="endereco" name="endereco" required></input>
+          </div>
+          <div class="mb-3">
+            <label for="uf" class="form-label">UF</label>
+            <input type="text" class="form-control" id="uf" name="uf" maxlength="2" required></input>
+          </div>
+          <div class="mb-3">
+            <label for="cep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="cep" name="cep" required></input>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" required></input>
+          </div>
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" required></input>
+          </div>
+        </div>
+        <div>
+          <h3>Dados da consulta</h3>
+          <div class="mb-3">
+            <label for="especialidade" class="form-label">Especialidade médica</label>
+            <select class="form-select" id="especialidade" name="especialidade" required>
+              <option id="selecionarEspecialidade" value="selecionarEspecialidade" selected>Selecione uma especialidade</option>
+              <option id="clinicaMedica" value="clinicaMedica">Clínica Médica</option>
+              <option id="pediatria" value="pediatria">Pediatria</option>
+              <option id="ginecologiaObstetricia" value="ginecologiaObstetricia">Ginecologia e Obstetrícia</option>
+              <option id="ortopedia" value="ortopedia">Ortopedia</option>
+              <option id="cardiologia" value="cardiologia">Cardiologia</option>
+              <option id="oftalmologia" value="oftalmologia">Oftalmologia</option>
+              <option id="dermatologia" value="dermatologia">Dermatologia</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="dataAgendamento" class="form-label">Data de agendamento</label>
+            <input type="datetime-local" class="form-control" id="dataAgendamento" name="dataAgendamento" required></input>
+          </div>
+          <div class="mb-3">
+            <label for="medicamentosAlergicos" class="form-label">Medicamentos Alérgicos</label>
+            <select class="form-select" id="medicamentosAlergicos" name="medicamentosAlergicos" required>
+              <option id="selecionarMedicamento" value="selecionarMedicamento" selected>Selecione um tipo de medicamento</option>
+              <option id="antibioticos" value="antibioticos">Antibióticos</option>
+              <option id="analgesicos" value="analgesicos">Analgésicos</option>
+              <option id="antiInflamatorios" value="antiInflamatorios">Anti-inflamatórios</option>
+              <option id="antidepressivos" value="antidepressivos">Antidepressivos</option>
+              <option id="anticoagulantes" value="anticoagulantes">Anticoagulantes</option>
+              <option id="antialergicos" value="antialergicos">Antialérgicos</option>
+              <option id="ansioliticos" value="ansioliticos">Ansiolíticos</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="campoAdicional" class="form-label">Informações adicionais</label>
+            <textarea class="form-control" id="campoAdicional" name="campoAdicional" rows="2"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
